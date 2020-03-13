@@ -6,6 +6,7 @@ export const clearInput = ()=> elements.searchInput.value = '';
 
 export const clearResults = () => {
     elements.searchResList.innerHTML = '';
+    elements.searchResPages.innerHTML = '';
 };
 
 const limitRecipeTitle = (title, limit = 17) => {

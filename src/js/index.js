@@ -44,6 +44,8 @@ elements.searchResPages.addEventListener('click', e => {
     const btn = e.target.closest('.btn-inline');
 
     if (btn) {
-        const gotoPage = btn.dataset.goto;
+        const gotoPage = parseInt(btn.dataset.goto, 10);
+        searchView.clearResults();
+        searchView.renderResults(state.search.result, gotoPage);
     }
 });
